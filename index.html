@@ -1,113 +1,95 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BoardLoop</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+<body class="body theme-dungeon">
 
-<body class="body">
-    <main class="container main">
-        <img src="img/logo.png" alt="Logo BoardLoop">
-        <h1 class="slogan">
-            <div class="slogan__loop">
-                <ul class="flip4">
-                    <li class="slogan__palavra">Repeat</li>
-                    <li class="slogan__palavra">Return</li>
-                    <li class="slogan__palavra">Play</li>
-                    <li class="slogan__palavra">Rent</li>
-                </ul>
-            </div>
-        </h1>
+<main class="container main">
 
-        <section class="divisor">
-            <div class="divisor__line"></div>
-            <img src="img/fade_bar.svg" alt="Visual bar" class="divisor__bar">
-            <div class="divisor__line"></div>
-        </section>
-        <h1 class="page-title">Rent <span class="page-title__emphasis">boardgames</span></h1>
-        <section class="dashboard">
-            <ul class="dashboard__items">
-                <li class="dashboard__items__item" id="game-1">
-                    <div class="dashboard__item__img dashboard__item__img--rented">
-                        <img src="img/castle_ravenloft.png" alt="Capa jogo Castle Ravenloft">
-                    </div>
-                    <p class="dashboard__item__name">Castle Ravenloft</p>
-                    <a onclick="alterarStatus(1)" href="#" class="dashboard__item__button dashboard__item__button--return">Return</a>
-                </li>
-                <li class="dashboard__items__item" id="game-2">
-                    <div class="dashboard__item__img">
-                        <img src="img/ticket_to_ride.png" alt="Capa jogo Ticket to Ride">
-                    </div>
-                    <p class="dashboard__item__name">Ticket to Ride</p>
-                    <a onclick="alterarStatus(2)" href="#" class="dashboard__item__button">Rent</a>
-                </li>
-                <li class="dashboard__items__item" id="game-3">
-                    <div class="dashboard__item__img">
-                        <img src="img/takenoko.png" alt="Capa jogo Takenoko">
-                    </div>
-                    <p class="dashboard__item__name">Takenoko</p>
-                    <a onclick="alterarStatus(3)" href="#" class="dashboard__item__button">Rent</a>
-                </li>
-                <li class="dashboard__items__item" id="game-4">
-                    <div class="dashboard__item__img">
-                        <img src="img/exploding_kittens.png" alt="Capa jogo Exploding Kittens">
-                    </div>
-                    <p class="dashboard__item__name">Exploding Kittens</p>
-                    <a onclick="alterarStatus(4)" href="#" class="dashboard__item__button">Rent</a>
-                </li>
-                <li class="dashboard__items__item" id="game-5">
-                    <div class="dashboard__item__img">
-                        <img src="img/spirit_island.png" alt="Capa jogo Spirit Island">
-                    </div>
-                    <p class="dashboard__item__name">Spirit Island</p>
-                    <a onclick="alterarStatus(5)" href="#" class="dashboard__item__button">Rent</a>
-                </li>
-                <li class="dashboard__items__item" id="game-6">
-                    <div class="dashboard__item__img">
-                        <img src="img/zombicide.png" alt="Capa jogo Zombicide">
-                    </div>
-                    <p class="dashboard__item__name">Zombicide</p>
-                    <a onclick="alterarStatus(6)" href="#" class="dashboard__item__button">Rent</a>
-                </li>
+    <img src="img/logo.png" alt="Logo BoardLoop">
+    <h1 class="slogan"> 
+        <div class="slogan__loop">
+            <ul class="flip4">
+                <li class="slogan__palavra">Repeat</li>
+                <li class="slogan__palavra">Return</li>
+                <li class="slogan__palavra">Play</li>
+                <li class="slogan__palavra">Rent</li>
             </ul>
-        </section>
-        <img src="img/hachuras.svg" alt="Visual hachuras" class="hachuras">
-    </main>
+        </div>
+    </h1>
 
-    <footer class="rodape">
+    <section class="divisor">
+        <div class="divisor__line"></div>
+        <img src="img/fade_bar.svg" alt="Visual bar" class="divisor__bar">
+        <div class="divisor__line"></div>
+    </section>
+
+    <h1 class="page-title">Rent <span class="page-title__emphasis">boardgames</span></h1>
+
+    <section class="dashboard">
+        <ul class="dashboard__items">
+            <li class="dashboard__items__item" id="game-1" data-status="rented">
+                <div class="dashboard__item__img dashboard__item__img--rented">
+                    <img src="img/castle_ravenloft.png" alt="Castle Ravenloft">
+                </div>
+                <p class="dashboard__item__name">Castle Ravenloft</p>
+                <a onclick="alterarStatus(1)" href="#" class="dashboard__item__button dashboard__item__button--return">Return</a>
+            </li>
+            <li class="dashboard__items__item" id="game-2">
+                <div class="dashboard__item__img">
+                    <img src="img/ticket_to_ride.png" alt="Ticket to Ride">
+                </div>
+                <p class="dashboard__item__name">Ticket to Ride</p>
+                <a onclick="alterarStatus(2)" href="#" class="dashboard__item__button">Rent</a>
+            </li>
+            <li class="dashboard__items__item" id="game-3">
+                <div class="dashboard__item__img">
+                    <img src="img/takenoko.png" alt="Takenoko">
+                </div>
+                <p class="dashboard__item__name">Takenoko</p>
+                <a onclick="alterarStatus(3)" href="#" class="dashboard__item__button">Rent</a>
+            </li>
+            <li class="dashboard__items__item" id="game-4">
+                <div class="dashboard__item__img">
+                    <img src="img/exploding_kittens.png" alt="Exploding Kittens">
+                </div>
+                <p class="dashboard__item__name">Exploding Kittens</p>
+                <a onclick="alterarStatus(4)" href="#" class="dashboard__item__button">Rent</a>
+            </li>
+            <li class="dashboard__items__item" id="game-5">
+                <div class="dashboard__item__img">
+                    <img src="img/spirit_island.png" alt="Spirit Island">
+                </div>
+                <p class="dashboard__item__name">Spirit Island</p>
+                <a onclick="alterarStatus(5)" href="#" class="dashboard__item__button">Rent</a>
+            </li>
+            <li class="dashboard__items__item" id="game-6">
+                <div class="dashboard__item__img">
+                    <img src="img/zombicide.png" alt="Zombicide">
+                </div>
+                <p class="dashboard__item__name">Zombicide</p>
+                <a onclick="alterarStatus(6)" href="#" class="dashboard__item__button">Rent</a>
+            </li>
+        </ul>
+    </section>
+
+</main>
+
+<footer class="rodape">
     <div class="rodape__esquerda">
-        <h1 class="rodape__titulo">Developed by Francis.</h1>
-        <img src="img/end.png" alt="Dragão da logo" class="rodape__end">
+        <span class="rodape__dev">Developed by Francis</span>
     </div>
-
     <ul class="lista-rodape">
-        <li class="lista-rodape__titulo">See more</li>
-        <li class="lista-rodape__item">
-            <a href="https://github.com/" class="rodape__link">GitHub.</a>
-        </li>
-        <li class="lista-rodape__item">
-            <a href="https://vercel.com/francis-projects-0ee8cbb4" class="rodape__link">Vercel.</a>
-        </li>
-        <li class="lista-rodape__item">
-            <a href="https://www.linkedin.com/in/francis-de-moura-pereira-277147256/" class="rodape__link">LinkedIn.</a>
-        </li>
+        <li class="lista-rodape__item"><a href="https://github.com/Francisyk" class="rodape__link">GitHub</a></li>
+        <li class="lista-rodape__item"><a href="https://vercel.com/francis-projects-0ee8cbb4" class="rodape__link">Vercel</a></li>
+        <li class="lista-rodape__item"><a href="https://www.linkedin.com/in/francisdemourapereira/" class="rodape__link">LinkedIn</a></li>
     </ul>
 </footer>
 
-    <script src="js/app.js"></script>
+<script src="js/app.js"></script>
 </body>
-
-<script>
-  const links = document.querySelectorAll(".dashboard__items__item");
-
-  links.forEach(link => {
-    link.addEventListener("click", function(event) {
-      event.preventDefault();
-    });
-  });
-</script>
-
 </html>
